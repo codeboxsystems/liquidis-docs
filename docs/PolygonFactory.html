@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Chemic IO Class: Arrow</title>
+	<title>Chemic IO Namespace: PolygonFactory</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -104,12 +104,12 @@
 					
 
 
-	<h1 class="page-title">Class: Arrow</h1>
+	<h1 class="page-title">Namespace: PolygonFactory</h1>
 <section>
 
 <header>
     <h2>
-    Arrow
+    PolygonFactory
     </h2>
     
 </header>
@@ -120,75 +120,8 @@
 
     
         
-<dt>
-    <h4 class="name" id="Arrow"><span class="type-signature"></span>new Arrow<span class="signature">(config)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        Represents an arrow.
-    </div>
-    
 
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
         
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>config</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Configuration for the arrow.</td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
 <dl class="details">
 	
 
@@ -226,29 +159,11 @@
 	
 </dl>
 
-    
-    
 
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
+        
     
     </div>
 
-    
-        <h3 class="subsection-title">Extends</h3>
-
-        <ul>
-            <li><a href="Shape.html">Shape</a></li>
-        </ul>
     
 
     
@@ -267,7 +182,7 @@
         <dl>
             
 <dt>
-    <h4 class="name" id="pointTo"><span class="type-signature"></span>pointTo<span class="signature">(x, y)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="generate"><span class="type-signature">&lt;static> </span>generate<span class="signature">(type, shape)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -275,7 +190,7 @@
     
     
     <div class="description">
-        Rotates the arrow directly at the target coordinates.
+        Factory method for returning points that make up different polygons.
     </div>
     
 
@@ -309,13 +224,13 @@
 
         <tr>
             
-                <td class="name"><code>x</code></td>
+                <td class="name"><code>type</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">string</span>
 
 
             
@@ -325,20 +240,20 @@
 
             
 
-            <td class="description last">Target x coordinate.</td>
+            <td class="description last">Such as "Hexagon" or "Triangle".</td>
         </tr>
 
 	
 
         <tr>
             
-                <td class="name"><code>y</code></td>
+                <td class="name"><code>shape</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type"><a href="Shape.html">Shape</a></span>
 
 
             
@@ -348,233 +263,7 @@
 
             
 
-            <td class="description last">Target y coordinate.</td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="render"><span class="type-signature"></span>render<span class="signature">(ctx)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>ctx</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">CanvasRenderingCtx2D</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">HTML Canvas context.</td>
-        </tr>
-
-	
-	</tbody>
-</table>
-
-    
-    
-    
-<dl class="details">
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-    
-    
-
-    
-
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        
-            
-<dt>
-    <h4 class="name" id="sketch"><span class="type-signature"></span>sketch<span class="signature">(ctx)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        Invokes the shape's equivalent canvas draw method.
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-
-		<th>Type</th>
-
-		
-
-		
-
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-
-	<tbody>
-	
-
-        <tr>
-            
-                <td class="name"><code>ctx</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">CanvasRenderingCtx2D</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">HTML Canvas context.</td>
+            <td class="description last">Base shape instance to reference properties from.</td>
         </tr>
 
 	
